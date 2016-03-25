@@ -1,0 +1,431 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>利用GitHub&Jekyll搭建一个免费博客 | 2015-01-09</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+
+</head>
+
+<body>
+<!-- banner-body -->
+<div class="banner-body abt">
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div class="header-nav">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../index.html"><span>K</span>ing Sun</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="hvr-bounce-to-bottom active"><a href="../index.html">主页</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="../about.html">关于</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="../portfolio.html">作品集</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="../pages.html">更多</a></li>
+                            <li class="hvr-bounce-to-bottom"><a href="../contact.html">联系方式</a></li>
+                        </ul>
+                        <div class="sign-in">
+                            <ul>
+                                <li><a href="login.html">登录</a>/</li>
+                                <li><a href="register.html">注册</a></li>
+                            </ul>
+                        </div>
+                    </div><!--<!-- /.navbar-collapse -->
+                </nav>
+            </div>
+
+            <!-- search-scripts -->
+            <script src="js/classie.js"></script>
+            <script src="js/uisearch.js"></script>
+            <script>
+                new UISearch(document.getElementById('sb-search'));
+            </script>
+            <!-- //search-scripts -->
+        </div>
+        <!-- //header -->
+        <!-- single -->
+        <div class="single-page-artical">
+            <div class="artical-content">
+                <h3>利用GitHub&Jekyll搭建一个免费博客</h3>
+                <img class="img-responsive" src="images/banner.jpg" alt=" "/>
+                <p><h4 id="github-pages-1"><strong>为什么用GitHub Pages</strong></h4>
+                <ul>
+                    <li>
+                        <p>Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
+                    </li>
+                    <li>
+                        <p>GitHub是一个提供免费托管Git库的站点</p>
+                    </li>
+                    <li>
+                        <p>GitHub Pages的特点：免费托管、绑定域名、自带主题、支持自制页面和Jekyll。</p>
+                    </li>
+                    <li>
+                        <p>Jekyll是一个静态站点生成器，它会根据网页源码生成静态文件。它提供了模板、变量、插件等功能，可以用来编写整个网站。</p>
+                    </li>
+                </ul>
+
+                <h4 id="github-pages-1"><strong>用GitHub Pages的好处</strong></h4>
+                <ul>
+                    <li>
+                        <p>托管于GitHub,不用担心文章的丢失,即使文章误删也可以快速恢复</p>
+                    </li>
+                    <li>
+                        <p>免费&amp;无限流量</p>
+                    </li>
+                    <li>
+                        <p>可以绑定自己的域名(只能绑定一个)</p>
+                    </li>
+                </ul>
+
+                <hr/>
+
+                <h4 id="jekyll"><strong>搭建本地Jekyll环境</strong></h4>
+
+                <ul>
+                    <li>
+                        <p>安装Ruby（因为Jekyll是Ruby写的）</p>
+
+    <pre><code>$ sudo apt-get install ruby ruby-dev
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>修改ruby软件源</p>
+
+    <pre><code>$ gem sources --remove http://rubygems.org/
+        $ gem sources -a https://ruby.taobao.org/
+        $ gem sources -u
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>安装<code>Jekyll</code></p>
+
+    <pre><code>$ sudo gem install jekyll
+    </code></pre>
+
+                        <p>可能需要等一会</p>
+                    </li>
+                    <li>
+                        <p>安装<code>NodeJs</code> 不然运行的话会报 <code>Could not find a JavaScript runtime.</code></p>
+
+    <pre><code>$ sudo apt-get install nodejs
+    </code></pre>
+                    </li>
+                </ul>
+
+                <p>到此本地Jekyll环境就搭建好了</p>
+
+                <h4 id="github"><strong>GitHub创建一个项目</strong></h4>
+
+                <p>先确保本地已经搭建Git环境且有Git账号，然后GitHub 创建一个项目 假定为Blog</p>
+
+                <ul>
+                    <li>
+                        <p>克隆项目到本地(将下面的username换成你的名字)</p>
+
+    <pre><code>$ git clone https://github.com/username/Blog.git
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>切换到Blog目录</p>
+
+    <pre><code>$ cd Blog
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>修改分支名称</p>
+
+    <pre><code>$ git branch -m master gh-pages
+        $ git push origin gh-pages
+    </code></pre>
+
+                        <p>在GitHub的Blog项目找到主分支切换，选择gh-pages分支</p>
+
+                        <p><img src="images/gh-pages.png" alt="分支切换"/></p>
+                    </li>
+                    <li>
+                        <p>删除GitHub的master分支</p>
+
+    <pre><code>$ git push --delete origin master
+    </code></pre>
+                    </li>
+                </ul>
+
+                <h4 id="jekyll-1"><strong>Jekyll搭建示例</strong></h4>
+
+                <ul>
+                    <li>
+                        <p>绑定域名（没有域名可以忽略）</p>
+
+    <pre><code>$ vim CNAME
+    </code></pre>
+
+                        <p>在里面填入你的域名，并将域名的CNAME记录指向到<code>ursename.github.io</code></p>
+                    </li>
+                    <li>
+                        <p>创建Jekyll的配置</p>
+
+    <pre><code>$ vim _config.yml
+    </code></pre>
+
+                        <p>在里面填入以下内容</p>
+
+    <pre><code>title: My Blog
+        baseurl: ""
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>创建模板文件夹</p>
+
+    <pre><code>$ mkdir _layouts
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>创建一个模板文件</p>
+
+    <pre><code>$ vim _layouts/default.html
+    </code></pre>
+
+                        <p>在里面写入以下内容</p>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+        &lt;title&gt;{{ page.title }}&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        {{ content }}
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>创建文章目录</p>
+
+    <pre><code>$ mkdir _posts
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>创建一篇文章</p>
+
+    <pre><code>$ vim _posts/2015-01-01-hello_world.md
+    </code></pre>
+
+                        <p>在里面填入以下内容</p>
+
+    <pre><code>---
+        layout: default
+        title: hello world
+        ---
+        &lt;h2&gt;{{ page.title }}&lt;/h2&gt;
+        &lt;p&gt;你好，世界&lt;/p&gt;
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>创建首页</p>
+
+    <pre><code>$ vim index.md
+    </code></pre>
+
+                        <p>在里面填入以下内容</p>
+
+    <pre><code>---
+        layout: default
+        title: 我的Blog
+        ---
+
+        &lt;h2&gt;{{ page.title }}&lt;/h2&gt;
+        &lt;p&gt;最新文章&lt;/p&gt;
+        &lt;ul&gt;
+        {% for post in site.posts %}
+        &lt;li&gt;
+        {{ post.date | date_to_string }}
+        &lt;a href="{{ site.baseurl }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+        &lt;/li&gt;
+        {% endfor %}
+        &lt;/ul&gt;
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>这时的目录结构应该是这样的</p>
+
+    <pre><code>.
+        ├── _config.yml
+        ├── index.md
+        ├── _layouts
+        │   └── default.html
+        ├── _posts
+        │   └── 2015-01-01-hello_world.md
+        └── README.md
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>本地环境运行</p>
+
+    <pre><code>$ jekyll server
+    </code></pre>
+
+                        <p>正常会在4000端口运行，用浏览器打开<code>127.0.0.1:4000</code>,如果看到以下的内容，那么就搭建成功了</p>
+
+                        <p><img src="images/my_blog.png" alt="浏览器打开效果"/></p>
+                    </li>
+                </ul>
+
+                <h4 id="pushgithub"><strong>push到GitHub</strong></h4>
+
+                <ul>
+                    <li>
+                        <p>提交并推送到GitHub</p>
+
+    <pre><code>$ git add .
+        $ git commit -m "hello world"
+        $ git push origin gh-pages
+    </code></pre>
+                    </li>
+                    <li>
+                        <p>这时打开上面你CNAME指向的域名或者GitHub的域名（usename.github.io/Blog）</p>
+
+                        <p>一个简单的博客就搭建完成了</p>
+
+                        <p>注：push到GitHub后不会立即生效，大概要等30s左右</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="artical-links">
+                <ul>
+                    <li>
+                        <small></small>
+                        <span>21/3/2016</span></li>
+                    <li><a href="#">
+                        <small class="admin"></small>
+                        <span>admin</span></a></li>
+                    <li><a href="#">
+                        <small class="no"></small>
+                        <span>No comments</span></a></li>
+                    <li><a href="#">
+                        <small class="posts"></small>
+                        <span>View posts</span></a></li>
+                    <li><a href="#">
+                        <small class="link"></small>
+                        <span>permalink</span></a></li>
+                </ul>
+            </div><!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="1" data-title="利用GitHub&Jekyll搭建一个免费博客"
+                 data-url="http://www.code-dancer.com:8888/article/single.html"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name: "kingsun"};
+                (function () {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';
+                    ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            <!-- 多说公共JS代码 end -->
+        </div>
+        <!-- single -->
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid">
+                <h3>勇于尝试</h3>
+                <div class="footer-grd-left">
+                    <img src="images/php.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="footer-grd-left">
+                    <p>前端小白，正在慢慢成长中，愿各位大牛多多指点！</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="col-md-3 footer-grid">
+                <h3>友情链接</h3>
+                <ul>
+                    <li><a href="#">doloribus asperiores</a></li>
+                    <li><a href="#">Itaque earum rerum</a></li>
+                    <li><a href="#">deserunt mollitia</a></li>
+                    <li><a href="#">facilis est et expedita</a></li>
+                    <li><a href="#">occaecati cupiditate</a></li>
+                    <li><a href="#">deserunt mollitia laborum</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>我的好友</h3>
+                <div class="footer-grd">
+                    <img src="images/7.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="footer-grd">
+                    <img src="images/8.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="footer-grd">
+                    <img src="images/9.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="clearfix"></div>
+                <div class="footer-grd">
+                    <img src="images/10.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="footer-grd">
+                    <img src="images/7.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="footer-grd">
+                    <img src="images/8.jpg" class="img-responsive" alt=" "/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+        <p>© 2016 King Sun. All rights reserved | Design by <a href="#">King Sun</a></p>
+    </div>
+</div>
+<!-- //footer -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<script src="js/duoshuo.js"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>
